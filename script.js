@@ -12,15 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const imageElement = document.getElementById('random-image');
     const reloadButton = document.getElementById('reload-button');
     const kimariji = document.getElementById('kimariji');
-    const question = document.getElementById('question');
     const kimarijiButton = document.getElementById('kimariji-button');
 
     // 決まり字の表示
-    // kimarijiButton.addEventListener('click', function() {
-    //     if (window.getComputedStyle(kimariji).display === 'none') {
-    //         kimariji.style.display = 'flex';
-    //     }
-    // });
+    kimarijiButton.addEventListener('click', function() {
+        if (window.getComputedStyle(kimariji).display === 'none') {
+            kimariji.style.display = 'flex';
+        }
+    });
 
     // 配列の先頭から100個をシャッフルする
     function shuffleArray(array) {
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         imageElement.src = './torifuda/tori_0.png';
         kimariji.textContent = '';
         kimariji.style.display = 'none';
-        question.style.display = 'none';
+        kimarijiButton.style.display = 'none';
         currentFuda = 0;
         fudaOrder = shuffleArray(fudaOrder);
     }   
@@ -66,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const isFlipped = Math.random() < 0.5;
         imageElement.src = isFlipped ? fuda.reverse : fuda.normal;
 
-        // 決まり字は3つ前のものを表示
-        if (order >= 3) {
-            const fuda2back = fudaOrder[order - 3];
+        // 決まり字は2つ前のものを表示
+        if (order >= 2) {
+            const fuda2back = fudaOrder[order - 2];
             document.getElementById('kimariji').textContent = fuda2back.kimariji;
         }
     }
@@ -79,19 +78,19 @@ document.addEventListener("DOMContentLoaded", function() {
             startTime = Date.now();
             displayFuda(currentFuda);
             currentFuda++;
-        } else if (currentFuda === 103) {
+        } else if (currentFuda === 102) {
             stopTimer();
         } else if (currentFuda === 2) {
             displayFuda(currentFuda);
-            question.style.display = 'flex';
-            currentFuda++;
-        } else if (currentFuda === 3) {
-            displayFuda(currentFuda);
-            kimariji.style.display = 'flex';
+            kimarijiButton.style.display = 'inline-block';
             currentFuda++;
         } else {
             displayFuda(currentFuda);
             currentFuda++;
+        }
+
+        if (window.getComputedStyle(kimariji).display === 'flex') {
+            kimariji.style.display = 'none';
         }
     });
 
