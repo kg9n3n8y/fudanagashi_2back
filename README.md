@@ -1,5 +1,5 @@
-# fudanagashi
+# fudanagashi_2back
 
-札流しをするWebアプリ
+2つ前の決まり字を言う札流しWebアプリ
 
-https://kg9n3n8y.github.io/fudanagashi/
+https://kg9n3n8y.github.io/fudanagashi_2back/

@@ -1,5 +1,5 @@
 // Cache name
-const CACHE_NAME = 'fudanagashi-caches';
+const CACHE_NAME = 'fudanagashi-2back-caches';
 // Cache targets
 const urlsToCache = [
   './',
@@ -208,7 +208,8 @@ const urlsToCache = [
   "./torifuda/tori_r_97.png",
   "./torifuda/tori_r_98.png",
   "./torifuda/tori_r_99.png",
-  "./torifuda/tori_r_100.png"
+  "./torifuda/tori_r_100.png",
+  "./torifuda/tori_dummy.png"
 ];
 
 self.addEventListener('install', (event) => {

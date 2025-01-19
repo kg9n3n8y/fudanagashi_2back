@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta property="og:title" content="札流し">
-    <meta property="og:description" content="札流しを練習するためのWebアプリ">
+    <meta property="og:title" content="2-back札流し">
+    <meta property="og:description" content="2つ前の決まり字を言う札流しWebアプリ">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kg9n3n8y.github.io/fudanagashi/">
-    <meta property="og:image" content="https://kg9n3n8y.github.io/fudanagashi/thumbnail.png">
-    <meta property="og:site_name" content="札流し">
+    <meta property="og:url" content="https://kg9n3n8y.github.io/fudanagashi_2back/">
+    <meta property="og:image" content="https://kg9n3n8y.github.io/fudanagashi_2back/thumbnail.png">
+    <meta property="og:site_name" content="2-back札流し">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="札流し">
-    <meta name="twitter:description" content="札流しを練習するためのWebアプリ">
-    <meta name=”twitter:image” content=”https://kg9n3n8y.github.io/fudanagashi/thumbnail.png” />
+    <meta name="twitter:title" content="2-back札流し">
+    <meta name="twitter:description" content="2つ前の決まり字を言う札流しWebアプリ">
+    <meta name=”twitter:image” content=”https://kg9n3n8y.github.io/fudanagashi_2back/thumbnail.png” />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>札流し</title>
+    <title>2-back札流し</title>
     <link rel="manifest" href="manifest.json"/>
-    <link rel="shortcut icon" type="image/png" href="https://kg9n3n8y.github.io/fudanagashi/icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://kg9n3n8y.github.io/fudanagashi/icon.png">
+    <link rel="shortcut icon" type="image/png" href="https://kg9n3n8y.github.io/fudanagashi_2back/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kg9n3n8y.github.io/fudanagashi_2back/icon.png">
     <link rel="stylesheet" href="./style.css">
     <script src="./fudalist.js"></script>
   </head>
@@ -40,10 +40,11 @@
     </div>
 
     <div id="kimariji"></div>
+    <div id="question">2つ前の札は？</div>
 
-    <div class="button-container">
+    <!-- <div class="button-container">
       <button id="kimariji-button">決まり字を見る</button>
-    </div>
+    </div> -->
 
     <div class="button-container">
         <button id="reload-button">最初から</button>
@@ -251,6 +252,7 @@
       <img src="./torifuda/tori_r_98.png">
       <img src="./torifuda/tori_r_99.png">
       <img src="./torifuda/tori_r_100.png">
+      <img src="./torifuda/tori_dummy.png">
     </div>
 
     <script src="script.js"></script>

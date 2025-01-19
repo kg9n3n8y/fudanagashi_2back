@@ -1,5 +1,5 @@
 {
-    "name": "札流し",
+    "name": "2つ前の決まり字を言う札流しWebアプリ",
     "icons": [
         {
         "src": "./icon.png",
@@ -9,6 +9,6 @@
     ],
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#E1DAC3",
+    "background_color": "#ede0ff",
     "theme_color": "#FFFFFF"
 }

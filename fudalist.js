@@ -98,5 +98,8 @@ const fudalist = [
     { no:   97, kimariji: "こぬ", normal: "./torifuda/tori_97.png", reverse: "./torifuda/tori_r_97.png"},
     { no:   98, kimariji: "かぜそ", normal: "./torifuda/tori_98.png", reverse: "./torifuda/tori_r_98.png"},
     { no:   99, kimariji: "ひとも", normal: "./torifuda/tori_99.png", reverse: "./torifuda/tori_r_99.png"},
-    { no:   100, kimariji: "もも", normal: "./torifuda/tori_100.png", reverse: "./torifuda/tori_r_100.png"}
+    { no:   100, kimariji: "もも", normal: "./torifuda/tori_100.png", reverse: "./torifuda/tori_r_100.png"},
+    { no:   101, kimariji: "", normal: "./torifuda/tori_dummy.png", reverse: "./torifuda/tori_dummy.png"},
+    { no:   102, kimariji: "", normal: "./torifuda/tori_dummy.png", reverse: "./torifuda/tori_dummy.png"},
+    { no:   103, kimariji: "", normal: "./torifuda/tori_dummy.png", reverse: "./torifuda/tori_dummy.png"}
 ]

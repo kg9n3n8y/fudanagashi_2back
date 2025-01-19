@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color : #E1DAC3;
+  background-color : #daeac2;
   font-size        : 20px;
   display          : flex;
   flex-direction   : column;
@@ -13,7 +13,7 @@ body {
 }
 
 #image-container {
-  width            : 300px;
+  width            : 280px;
   height           : auto;
   display          : flex;
   align-items      : center;
@@ -46,7 +46,15 @@ button {
 #kimariji {
   font-size        : 48px;
   font-weight      : bold;
-  color            : #cc0000;
+  color            : #0000cc;
+  margin           : 0;
+  display          : none;
+}
+
+#question {
+  font-size        : 24px;
+  font-weight      : bold;
+  color            : #000000;
   margin           : 0;
   display          : none;
 }

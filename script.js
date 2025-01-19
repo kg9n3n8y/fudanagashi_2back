@@ -12,18 +12,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const imageElement = document.getElementById('random-image');
     const reloadButton = document.getElementById('reload-button');
     const kimariji = document.getElementById('kimariji');
+    const question = document.getElementById('question');
     const kimarijiButton = document.getElementById('kimariji-button');
 
     // 決まり字の表示
-    kimarijiButton.addEventListener('click', function() {
-        if (window.getComputedStyle(kimariji).display === 'none') {
-            kimariji.style.display = 'flex';
-        }
-    });
+    // kimarijiButton.addEventListener('click', function() {
+    //     if (window.getComputedStyle(kimariji).display === 'none') {
+    //         kimariji.style.display = 'flex';
+    //     }
+    // });
 
-    // 配列をシャッフルする
+    // 配列の先頭から100個をシャッフルする
     function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
+        for (let i = 99; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
@@ -53,8 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function resetPage(){
         imageElement.src = './torifuda/tori_0.png';
         kimariji.textContent = '';
+        kimariji.style.display = 'none';
+        question.style.display = 'none';
         currentFuda = 0;
-        fudaOrder = shuffleArray(fudaOrder)
+        fudaOrder = shuffleArray(fudaOrder);
     }   
 
     // 札リストから選ばれた札を表示
@@ -62,7 +65,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const fuda = fudaOrder[order];
         const isFlipped = Math.random() < 0.5;
         imageElement.src = isFlipped ? fuda.reverse : fuda.normal;
-        document.getElementById('kimariji').textContent = fuda.kimariji;
+
+        // 決まり字は3つ前のものを表示
+        if (order >= 3) {
+            const fuda2back = fudaOrder[order - 3];
+            document.getElementById('kimariji').textContent = fuda2back.kimariji;
+        }
     }
 
     // 画像クリック時のイベント
@@ -71,15 +79,19 @@ document.addEventListener("DOMContentLoaded", function() {
             startTime = Date.now();
             displayFuda(currentFuda);
             currentFuda++;
-        } else if (currentFuda === 100) {
+        } else if (currentFuda === 103) {
             stopTimer();
+        } else if (currentFuda === 2) {
+            displayFuda(currentFuda);
+            question.style.display = 'flex';
+            currentFuda++;
+        } else if (currentFuda === 3) {
+            displayFuda(currentFuda);
+            kimariji.style.display = 'flex';
+            currentFuda++;
         } else {
             displayFuda(currentFuda);
             currentFuda++;
-        }
-
-        if (window.getComputedStyle(kimariji).display === 'flex') {
-            kimariji.style.display = 'none';
         }
     });
 
